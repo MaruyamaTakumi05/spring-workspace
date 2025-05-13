@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+< xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		<h1>研修お問い合わせ</h1>
+		<form action="/contact" method="post">
+		<h2>お名前[必須]</h2>
+				<input type="text" name="name" />
+		<h2>メールアドレス[必須]</h2>
+				<input type="text" name="email" />
+		<h2>趣味：</h2>
+				<textarea cols="40" rows="2" name="hobby"></textarea>
+				<button>送信</button>
+		</form>
+</body>
+</html>

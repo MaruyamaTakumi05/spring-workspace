@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://localhost:8080">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>情報を入力してください</h1>
+	<p th:text="${memo}"></p>
+<form action="/hello" method="get">
+	<h2>名前：</h2>
+			<input type="text" name="msg" />
+	<h2>年齢：</h2>
+			<input type="text" name="msg" />
+	<h2>趣味：</h2>
+			<input type="text" name="msg" />
+			<button>送信</button>
+	</form>
+</body>
+</html>

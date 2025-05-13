@@ -1,0 +1,34 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller //必ず忘れない
+public class itemController {
+	
+	@GetMapping("/item/hidden")
+	public String itemFormHidden() {
+		return "itemFormHidden";
+	}
+	
+	@PostMapping("/item")
+	public String conform(
+			@RequestParam(name = "name", defaultValue = "未入力") String name,
+			@RequestParam(name = "price", defaultValue = "100") int price,
+			Model model) {
+
+		model.addAttribute("name", name);
+		model.addAttribute("price", price);
+
+		return "itemConfirm";
+	}
+
+	@GetMapping("/")
+	public String index() {
+		return "itemForm";//ファイル名
+	}
+
+}

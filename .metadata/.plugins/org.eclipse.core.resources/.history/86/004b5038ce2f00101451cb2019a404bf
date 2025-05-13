@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>お問い合わせありがとうございます</h1>
+	
+	<h4>以下の内容にて受け付けました</h4>
+	<table border="1">
+		<tr><th>言語<td th:each="lang:${langlist}" th:text="${lang}+', '"></td></th></tr>
+			<tr><th>お名前<td th:text="${name}"></td></th></tr>
+			<tr><th>メールアドレス<td th:text="${email}"></td></th></tr>
+	</table>
+</body>
+</html>
