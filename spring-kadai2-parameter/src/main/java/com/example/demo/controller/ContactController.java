@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller
+@Controller //ファイルの種別がコントローラーであることを宣言する
 public class ContactController {
 
 	@PostMapping("/contact")
@@ -18,6 +19,7 @@ public class ContactController {
 			@RequestParam(name = "email", defaultValue = "") String email,
 			@RequestParam(name = "lang", defaultValue = "") String[] langlist,
 			@RequestParam(name = "detail", defaultValue = "") String detail,
+			@RequestParam(name = "releaseDate", defaultValue = "") LocalDate releaseDate,
 			Model model) {
 
 		List<String> errorlist = new ArrayList<String>();
@@ -41,13 +43,12 @@ public class ContactController {
 		model.addAttribute("email", email);
 		model.addAttribute("langlist", langlist);
 		model.addAttribute("detail", detail);
+		model.addAttribute("releaseDate", releaseDate);
 		return "contactResult";
 	}
 
 	@GetMapping("/contact")
-	public String ContactForm(
-
-	) {
+	public String ContactForm() {
 		return "contactForm";
 	}
 

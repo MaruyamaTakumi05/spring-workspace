@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>登録内容確認</h1>
+		
+		<h4>以下の内容で登録します</h4>
+		<table border="1">
+			<tr>
+			<tr><th>お名前<td>[[${account.name}]]</td></th></tr>
+			<tr><th>メールアドレス<td>[[${account.email}]]</td></th></tr>
+			<tr><th>パスワード<td>[[${account.password}]]</td></th></tr>
+		</table>
+</body>
+</html>
