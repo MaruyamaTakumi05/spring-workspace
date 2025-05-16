@@ -43,9 +43,8 @@ public class CartController {
 		List<Item> items = cart.getItems();
 
 		Item item = new Item(name, price);
-		model.addAttribute("item", item);
-
 		items.add(item);
+		model.addAttribute("item", item);
 
 		return "cart";
 	}

@@ -24,7 +24,7 @@ public class Account {
 		this.name = name;
 	}
 
-	public void setEmil(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 

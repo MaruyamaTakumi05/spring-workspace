@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,9 @@ import com.example.demo.service.RandomStringService;
 @Controller
 public class RandomStringController {
 
+	@Autowired //DI:依存性の注入
+	RandomStringService service;
+
 	//作成するボタンをクリックした時
 	@PostMapping("/random")
 	public String generate(
@@ -21,7 +25,7 @@ public class RandomStringController {
 			Model model) {
 
 		//ランダム文字列の生成と共用のデータ置き場に設定
-		RandomStringService service = new RandomStringService();
+		//RandomStringService service = new RandomStringService();
 		List list = service.generate(charLength, withNumber);
 		//画面遷移
 
