@@ -36,9 +36,10 @@
 		</section>
 	</section>
 	<section name="ImportExportAction">
-		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.FileSystem"/>
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.buildship.ui.wizards.project.import"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.buildship.ui.importwizards"/>
 		</list>
 		<section name="ImportExportWizard.dialogBounds">
 		</section>
@@ -47,6 +48,7 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\student\Desktop\授業用ソースコード\Java\Springフレームワーク_ソースコード\spring-chap7-jpa-crud\src\main\resources\templates"/>
 			<item value="C:\Users\student\Desktop\授業用ソースコード\Java\Springフレームワーク_ソースコード\spring-chap7-jpa\src\main\resources"/>
 			<item value="C:\Users\student\Desktop\授業用ソースコード\Java\Springフレームワーク_ソースコード\spring-chap5-session\src\main\resources\templates"/>
 			<item value="C:\Users\student\Desktop\授業用ソースコード\Java\Springフレームワーク_ソースコード\spring-chap4-mvc\src\main\resources\templates"/>
